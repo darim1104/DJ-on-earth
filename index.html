@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<title>DJ ON EARTH</title>
+<link rel="stylesheet" href="style.css?v=20261020d">
+<link rel="stylesheet" href="intro.css?v=20261020d">
+</head>
+<body>
+<!-- DJ 페이지 (시작 화면에서 앨범을 고르면 시작됨) -->
+<div id="stage" style="opacity:0">
+  <div id="cam"><canvas id="fisheye"></canvas></div>
+  <div id="deck">
+    <img id="deck-base" src="assets/deck-base.png?v=20261020d" alt="" draggable="false">
+    <img id="lp" src="assets/lp/03.png?v=20261020d" alt="" draggable="false">
+    <img id="arm" src="assets/tonearm.png?v=20261020d" alt="" draggable="false">
+    <div id="startstop"></div>
+  </div>
+</div>
+<video id="video" playsinline muted autoplay style="display:none"></video>
+
+<!-- 시작 화면 (앨범 선택) -->
+<div id="intro">
+<main id="viewport">
+  <canvas id="canvas"></canvas>
+  <div id="coverFocus"><div id="focusCard"><img id="focusImg" alt="selected album cover"></div></div>
+  <div id="hoverLabel"></div>
+  <div id="status" class="ui-fade">DEPTH <b id="value">01</b> / SCROLL · DRAG · HOVER · CLICK</div>
+  <button id="choose" class="ui-fade">SELECT THIS PLANE ↗</button>
+  <div id="toast" role="status" class="ui-fade"></div>
+  <footer class="ui-fade"><button class="active" id="overview">OVERVIEW</button><button id="index">INDEX</button></footer>
+</main>
+</div>
+
+<script src="tracks.js?v=20261020d"></script>
+<script src="intro.js?v=20261020d"></script>
+</body>
+</html>
